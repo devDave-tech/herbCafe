@@ -1,0 +1,323 @@
+/* ===== FLOWING GALLERY - Full Viewport Auto-Scrolling ===== */
+
+/* Make the gallery page non-scrollable */
+.gallery-page {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-page main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Gallery header */
+.gallery-header {
+    text-align: center;
+    padding: 1.5rem 1rem 1rem;
+    flex-shrink: 0;
+}
+
+.gallery-header h1 {
+    margin-bottom: 0.25rem;
+}
+
+.gallery-header p {
+    margin-bottom: 0;
+}
+
+/* Gallery flowing container - fills remaining viewport */
+.gallery-flow-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+    padding: 1rem 0;
+    position: relative;
+}
+
+/* Subtle vignette overlay on edges */
+.gallery-flow-container::before,
+.gallery-flow-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.gallery-flow-container::before {
+    left: 0;
+    background: linear-gradient(to right, #000000 0%, transparent 100%);
+}
+
+.gallery-flow-container::after {
+    right: 0;
+    background: linear-gradient(to left, #000000 0%, transparent 100%);
+}
+
+/* Each flowing row */
+.gallery-flow-row {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    will-change: transform;
+}
+
+/* Smooth infinite scroll animation */
+.gallery-flow-row.scroll-left {
+    animation: scrollLeft var(--scroll-duration, 60s) linear infinite;
+}
+
+.gallery-flow-row.scroll-right {
+    animation: scrollRight var(--scroll-duration, 60s) linear infinite;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Pause on hover for closer look */
+.gallery-flow-row:hover {
+    animation-play-state: paused;
+}
+
+/* Gallery image items */
+.gallery-flow-item {
+    flex-shrink: 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Row heights - each row has a set height */
+.gallery-flow-row.row-tall .gallery-flow-item {
+    height: 260px;
+}
+
+.gallery-flow-row.row-medium .gallery-flow-item {
+    height: 220px;
+}
+
+.gallery-flow-row.row-short .gallery-flow-item {
+    height: 180px;
+}
+
+/* Image width depends on aspect ratio */
+.gallery-flow-item.aspect-wide {
+    width: 420px;
+}
+
+.gallery-flow-item.aspect-standard {
+    width: 320px;
+}
+
+.gallery-flow-item.aspect-portrait {
+    width: 200px;
+}
+
+.gallery-flow-item.aspect-square {
+    width: 260px;
+}
+
+/* Image styling */
+.gallery-flow-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Subtle hover - NO disappearing, just a gentle lift and glow */
+.gallery-flow-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(164, 214, 94, 0.4);
+    z-index: 20;
+}
+
+.gallery-flow-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Green border glow on hover */
+.gallery-flow-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    border: 2px solid transparent;
+    transition: border-color 0.4s ease;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.gallery-flow-item:hover::before {
+    border-color: rgba(164, 214, 94, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gallery-flow-row.row-tall .gallery-flow-item {
+        height: 200px;
+    }
+
+    .gallery-flow-row.row-medium .gallery-flow-item {
+        height: 170px;
+    }
+
+    .gallery-flow-row.row-short .gallery-flow-item {
+        height: 140px;
+    }
+
+    .gallery-flow-item.aspect-wide {
+        width: 320px;
+    }
+
+    .gallery-flow-item.aspect-standard {
+        width: 250px;
+    }
+
+    .gallery-flow-item.aspect-portrait {
+        width: 160px;
+    }
+
+    .gallery-flow-item.aspect-square {
+        width: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery-flow-container {
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+    }
+
+    .gallery-flow-row {
+        gap: 0.5rem;
+    }
+
+    .gallery-flow-row.row-tall .gallery-flow-item {
+        height: 150px;
+    }
+
+    .gallery-flow-row.row-medium .gallery-flow-item {
+        height: 130px;
+    }
+
+    .gallery-flow-row.row-short .gallery-flow-item {
+        height: 110px;
+    }
+
+    .gallery-flow-item.aspect-wide {
+        width: 240px;
+    }
+
+    .gallery-flow-item.aspect-standard {
+        width: 190px;
+    }
+
+    .gallery-flow-item.aspect-portrait {
+        width: 120px;
+    }
+
+    .gallery-flow-item.aspect-square {
+        width: 150px;
+    }
+
+    .gallery-header {
+        padding: 1rem 0.5rem 0.5rem;
+    }
+}
+
+/* ===== GLightbox Dark Theme Overrides ===== */
+
+/* Dark overlay background */
+.goverlay {
+    background: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Remove white background from slide container */
+.gslide {
+    background: transparent !important;
+}
+
+.gslide-inner-content {
+    background: transparent !important;
+}
+
+.glightbox-clean .gslide-media {
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Dark description area (the white bar at bottom) */
+.glightbox-clean .gslide-description {
+    background: rgba(0, 0, 0, 0.85) !important;
+    border-top: 1px solid rgba(164, 214, 94, 0.2);
+}
+
+.glightbox-clean .gslide-title {
+    color: #A4D65E !important;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.glightbox-clean .gdesc-inner {
+    background: transparent !important;
+}
+
+.glightbox-clean .gslide-desc {
+    color: #ccc !important;
+}
+
+/* Close button styling */
+.glightbox-clean .gclose,
+.glightbox-clean .gnext,
+.glightbox-clean .gprev {
+    background: rgba(0, 0, 0, 0.6) !important;
+    border: 1px solid rgba(164, 214, 94, 0.3) !important;
+}
+
+.glightbox-clean .gclose:hover,
+.glightbox-clean .gnext:hover,
+.glightbox-clean .gprev:hover {
+    background: rgba(164, 214, 94, 0.2) !important;
+}
+
+/* Image container - no extra white space */
+.glightbox-clean .gslide-image img {
+    background: transparent !important;
+}
+
+/* Counter text */
+.glightbox-clean .gslide-title,
+.gslide-title {
+    color: #A4D65E !important;
+}

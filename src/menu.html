@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Herb Café - Food & Drinks</title>
+    <meta name="description" content="Explore our delicious menu of gourmet food and craft drinks at Herb Café.">
+    <link rel="icon" type="image/svg+xml" href="/images/logo/cup_logo.png">
+
+    <!-- CSS (loaded synchronously to prevent FOUC) -->
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/animations.css">
+    <link rel="stylesheet" href="/src/css/components.css">
+</head>
+
+<body class="bg-herb-dark text-white font-inter">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center">
+                <img src="/images/logo/herb-cafe-logo-no-bg.png" alt="Herb Café" class="h-40"
+                    onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-bebas text-2xl text-herb-green\'>HERB CAFÉ</span>';">
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a href="/" class="nav-link">HOME</a>
+                <a href="/src/menu.html" class="nav-link active">MENU</a>
+                <a href="/src/shop.html" class="nav-link">SHOP</a>
+                <a href="/src/gallery.html" class="nav-link">GALLERY</a>
+                <a href="/src/contact.html" class="nav-link">CONTACT</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden text-herb-green text-3xl focus:outline-none"
+                aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="p-6">
+            <button id="mobile-menu-close" class="text-herb-green text-3xl mb-8 focus:outline-none"
+                aria-label="Close menu">✕</button>
+            <div class="flex flex-col gap-6">
+                <a href="/"
+                    class="mobile-nav-link font-bebas text-3xl text-white hover:text-herb-green transition">HOME</a>
+                <a href="/src/menu.html" class="mobile-nav-link font-bebas text-3xl text-herb-green">MENU</a>
+                <a href="/src/shop.html"
+                    class="mobile-nav-link font-bebas text-3xl text-white hover:text-herb-green transition">SHOP</a>
+                <a href="/src/gallery.html"
+                    class="mobile-nav-link font-bebas text-3xl text-white hover:text-herb-green transition">GALLERY</a>
+                <a href="/src/contact.html"
+                    class="mobile-nav-link font-bebas text-3xl text-white hover:text-herb-green transition">CONTACT</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-20">
+        <div class="container mx-auto px-6">
+            <!-- Page Header -->
+            <h1 class="section-title mb-8">MENU</h1>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+                Freshly prepared gourmet dishes and craft drinks. Order via WhatsApp for delivery or dine in with us.
+            </p>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs" id="menu-tabs">
+                <button class="category-tab active" data-category="food">FOOD</button>
+                <button class="category-tab" data-category="drinks">DRINKS</button>
+                <button class="category-tab" data-category="all">ALL</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="product-grid" id="menu-grid">
+                <!-- Populated via JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto px-6">
+            <div class="footer-grid">
+                <div>
+                    <span class="font-bebas text-3xl text-herb-green">HERB CAFÉ</span>
+                    <p class="text-gray-400 mt-2">Cannabis • Food • Drinks • Culture</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">QUICK LINKS</h4>
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="/src/menu.html" class="footer-link">Menu</a>
+                    <a href="/src/shop.html" class="footer-link">Shop</a>
+                    <a href="/src/gallery.html" class="footer-link">Gallery</a>
+                    <a href="/src/contact.html" class="footer-link">Contact</a>
+                </div>
+                <div>
+                    <h4 class="footer-title">CONNECT WITH US</h4>
+                    <p class="text-gray-400 mb-2">📍 Langenhoven Park, Bloemfontein</p>
+                    <p class="text-gray-400 mb-2">📞 +27 XX XXX XXXX</p>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2024 Herb Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Herb%20Café!%20🌿%20I'd%20like%20to%20place%20an%20order."
+        target="_blank" id="whatsapp-btn" class="whatsapp-btn" aria-label="Order on WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module">
+        import { getWhatsAppOrderLink } from '/src/js/whatsapp.js';
+
+        // Fetch and render menu
+        async function initMenu() {
+            try {
+                const response = await fetch('/src/data/menu.json');
+                const data = await response.json();
+
+                const grid = document.getElementById('menu-grid');
+                const tabs = document.querySelectorAll('.category-tab');
+
+                let allItems = [];
+                data.categories.forEach(cat => {
+                    cat.items.forEach(item => {
+                        allItems.push({ ...item, category: cat.name.toLowerCase() });
+                    });
+                });
+
+                function renderItems(filter = 'all') {
+                    grid.innerHTML = '';
+                    const filtered = filter === 'all' ? allItems : allItems.filter(i => i.category === filter);
+
+                    filtered.forEach(item => {
+                        const card = document.createElement('div');
+                        card.className = 'card hover-lift';
+                        card.innerHTML = `
+              <div class="aspect-square bg-herb-gray overflow-hidden">
+                <img src="${item.image}" alt="${item.name}" class="card-image" 
+                  onerror="this.src='data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\' viewBox=\\'0 0 400 400\\'><rect fill=\\'%232D2D2D\\' width=\\'400\\' height=\\'400\\'/><text fill=\\'%23A4D65E\\' x=\\'50%\\' y=\\'50%\\' text-anchor=\\'middle\\' dy=\\'.3em\\' font-size=\\'24\\'>🍽️</text></svg>'">
+              </div>
+              <div class="card-body">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="card-title">${item.name}</h3>
+                  <span class="card-price">${item.price}</span>
+                </div>
+                <p class="card-description">${item.description}</p>
+                <a href="${getWhatsAppOrderLink(item.name)}" target="_blank" 
+                   class="btn btn-primary w-full mt-4 text-sm py-2">
+                  ORDER ON WHATSAPP
+                </a>
+              </div>
+            `;
+                        grid.appendChild(card);
+                    });
+                }
+
+                // Tab switching
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        tabs.forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+                        renderItems(tab.dataset.category);
+                    });
+                });
+
+                renderItems('food');
+            } catch (error) {
+                console.error('Failed to load menu:', error);
+                document.getElementById('menu-grid').innerHTML = '<p class="text-center text-gray-400 col-span-full">Menu coming soon...</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initMenu);
+    </script>
+</body>
+
+</html>
