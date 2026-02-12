@@ -1,0 +1,110 @@
+{
+    "categories": [
+        {
+            "name": "Food",
+            "items": [
+                {
+                    "name": "Herb Burger",
+                    "description": "Gourmet beef patty with secret sauce, fresh lettuce, tomato, and our signature herb aioli on a brioche bun",
+                    "price": "R95",
+                    "image": "/images/menu/burger.jpg"
+                },
+                {
+                    "name": "Green Goddess Wrap",
+                    "description": "Grilled chicken, avocado, mixed greens, and herb-infused dressing in a spinach wrap",
+                    "price": "R75",
+                    "image": "/images/menu/wrap.jpg"
+                },
+                {
+                    "name": "Loaded Nachos",
+                    "description": "Crispy tortilla chips topped with cheese, jalapeños, guacamole, and sour cream",
+                    "price": "R85",
+                    "image": "/images/menu/nachos.jpg"
+                },
+                {
+                    "name": "Café Toastie",
+                    "description": "Classic grilled cheese with ham, tomato, and our special herb butter",
+                    "price": "R55",
+                    "image": "/images/menu/toastie.jpg"
+                },
+                {
+                    "name": "Veggie Bowl",
+                    "description": "Quinoa, roasted vegetables, hummus, and fresh herbs with tahini dressing",
+                    "price": "R80",
+                    "image": "/images/menu/veggie-bowl.jpg"
+                },
+                {
+                    "name": "Wings Platter",
+                    "description": "Crispy chicken wings with your choice of BBQ, Hot, or Herb-Lemon glaze",
+                    "price": "R90",
+                    "image": "/images/menu/wings.jpg"
+                },
+                {
+                    "name": "Fish & Chips",
+                    "description": "Beer-battered hake with hand-cut chips and house tartar sauce",
+                    "price": "R110",
+                    "image": "/images/menu/fish-chips.jpg"
+                },
+                {
+                    "name": "Mushroom Risotto",
+                    "description": "Creamy arborio rice with wild mushrooms, parmesan, and truffle oil",
+                    "price": "R95",
+                    "image": "/images/menu/risotto.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Drinks",
+            "items": [
+                {
+                    "name": "Iced Green Tea",
+                    "description": "Refreshing herbal infusion with mint and honey",
+                    "price": "R35",
+                    "image": "/images/menu/green-tea.jpg"
+                },
+                {
+                    "name": "Café Latte",
+                    "description": "Double shot espresso with steamed milk and your choice of art",
+                    "price": "R38",
+                    "image": "/images/menu/latte.jpg"
+                },
+                {
+                    "name": "Mango Smoothie",
+                    "description": "Fresh mango blended with yogurt, honey, and ice",
+                    "price": "R45",
+                    "image": "/images/menu/mango-smoothie.jpg"
+                },
+                {
+                    "name": "Herb Lemonade",
+                    "description": "Homemade lemonade infused with fresh herbs and mint",
+                    "price": "R30",
+                    "image": "/images/menu/lemonade.jpg"
+                },
+                {
+                    "name": "Cappuccino",
+                    "description": "Classic Italian espresso with foamed milk and cocoa dust",
+                    "price": "R35",
+                    "image": "/images/menu/cappuccino.jpg"
+                },
+                {
+                    "name": "Fresh Orange Juice",
+                    "description": "Freshly squeezed oranges, no added sugar",
+                    "price": "R40",
+                    "image": "/images/menu/orange-juice.jpg"
+                },
+                {
+                    "name": "Hot Chocolate",
+                    "description": "Rich Belgian chocolate with whipped cream and marshmallows",
+                    "price": "R42",
+                    "image": "/images/menu/hot-chocolate.jpg"
+                },
+                {
+                    "name": "Milkshake",
+                    "description": "Choose from Chocolate, Vanilla, Strawberry, or Oreo",
+                    "price": "R48",
+                    "image": "/images/menu/milkshake.jpg"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "items": [
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-1.jpg",
+            "alt": "Herb Café interior with ambient lighting and modern décor"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/people-1.png",
+            "alt": "Friends enjoying the Herb Café vibe"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/drinks-1.png",
+            "alt": "Signature drinks and beverages"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-2.jpg",
+            "alt": "Cozy seating area with cannabis-friendly atmosphere"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/people-2.png",
+            "alt": "Customers relaxing in the lounge"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-3.jpg",
+            "alt": "Bar area with mood lighting"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/drinks-2.png",
+            "alt": "Craft cocktails and specialty drinks"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/people-3.png",
+            "alt": "Social atmosphere at Herb Café"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-4.jpg",
+            "alt": "Stylish interior design details"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/food-1.png",
+            "alt": "Delicious food offerings"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-5.jpg",
+            "alt": "Comfortable dining space"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/people-4.png",
+            "alt": "Guests enjoying the unique café experience"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/drinks-3.png",
+            "alt": "Premium beverage selection"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-6.jpg",
+            "alt": "Inviting café ambiance"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/people-5.png",
+            "alt": "Community gathering at Herb Café"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-7.jpg",
+            "alt": "Modern cannabis café interior"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/people-6.png",
+            "alt": "Patrons enjoying food and drinks"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-8.jpg",
+            "alt": "Elegant seating arrangements"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/people-7.png",
+            "alt": "Vibrant social scene"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-9.jpg",
+            "alt": "Welcoming café environment"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/people-8.png",
+            "alt": "Happy customers at Herb Café"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-10.jpg",
+            "alt": "Sophisticated interior styling"
+        },
+        {
+            "type": "image",
+            "src": "/images/gallery/interior-11.jpg",
+            "alt": "Premium cannabis café atmosphere"
+        }
+    ]
+}

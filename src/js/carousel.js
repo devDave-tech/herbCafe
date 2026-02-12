@@ -20,7 +20,7 @@ export async function initCarousel() {
 
     try {
         // Fetch partner data
-        const response = await fetch('/src/data/partners.json');
+        const response = await fetch('/data/partners.json');
         const data = await response.json();
 
         if (!data.partners || data.partners.length === 0) {

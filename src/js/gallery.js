@@ -21,7 +21,7 @@ export async function initGallery() {
 
     try {
         // Fetch gallery data
-        const response = await fetch('/src/data/gallery.json');
+        const response = await fetch('/data/gallery.json');
         const data = await response.json();
 
         if (!data.items || data.items.length === 0) {

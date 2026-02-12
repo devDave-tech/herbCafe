@@ -1,0 +1,109 @@
+{
+    "categories": [
+        {
+            "name": "Flower",
+            "items": [
+                {
+                    "name": "Premium Sativa",
+                    "description": "Uplifting daytime strain with citrus notes. Perfect for creative sessions.",
+                    "image": "/images/shop/flower-1.jpg"
+                },
+                {
+                    "name": "Indica Relaxation",
+                    "description": "Calming evening strain with earthy undertones. Ideal for unwinding.",
+                    "image": "/images/shop/flower-2.jpg"
+                },
+                {
+                    "name": "Hybrid Blend",
+                    "description": "Balanced hybrid offering the best of both worlds.",
+                    "image": "/images/shop/flower-3.jpg"
+                },
+                {
+                    "name": "Purple Haze",
+                    "description": "Classic strain with berry flavors and euphoric effects.",
+                    "image": "/images/shop/flower-4.jpg"
+                },
+                {
+                    "name": "OG Kush",
+                    "description": "Legendary strain known for its potent stress relief.",
+                    "image": "/images/shop/flower-5.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Edibles",
+            "items": [
+                {
+                    "name": "Gummy Bears",
+                    "description": "Delicious fruit-flavored gummies. Available in various strengths.",
+                    "image": "/images/shop/edible-1.jpg"
+                },
+                {
+                    "name": "Chocolate Bar",
+                    "description": "Premium dark chocolate infused with quality extract.",
+                    "image": "/images/shop/edible-2.jpg"
+                },
+                {
+                    "name": "Brownies",
+                    "description": "Classic homemade brownies with consistent dosing.",
+                    "image": "/images/shop/edible-3.jpg"
+                },
+                {
+                    "name": "Hard Candies",
+                    "description": "Long-lasting candies in assorted flavors.",
+                    "image": "/images/shop/edible-4.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Pre-rolls",
+            "items": [
+                {
+                    "name": "Classic Joint",
+                    "description": "Hand-rolled using premium flower. Ready to enjoy.",
+                    "image": "/images/shop/preroll-1.jpg"
+                },
+                {
+                    "name": "King Size",
+                    "description": "Larger format for sharing or extended sessions.",
+                    "image": "/images/shop/preroll-2.jpg"
+                },
+                {
+                    "name": "Infused Cone",
+                    "description": "Pre-roll enhanced with concentrate for extra potency.",
+                    "image": "/images/shop/preroll-3.jpg"
+                }
+            ]
+        },
+        {
+            "name": "Accessories",
+            "items": [
+                {
+                    "name": "Glass Pipe",
+                    "description": "Handcrafted glass pipe with unique designs.",
+                    "image": "/images/shop/accessory-1.jpg"
+                },
+                {
+                    "name": "Rolling Papers",
+                    "description": "Premium organic papers. Multiple sizes available.",
+                    "image": "/images/shop/accessory-2.jpg"
+                },
+                {
+                    "name": "Grinder",
+                    "description": "4-piece aluminum grinder with kief catcher.",
+                    "image": "/images/shop/accessory-3.jpg"
+                },
+                {
+                    "name": "Storage Jar",
+                    "description": "Air-tight UV-protected glass jar for freshness.",
+                    "image": "/images/shop/accessory-4.jpg"
+                },
+                {
+                    "name": "Rolling Tray",
+                    "description": "Metal tray with Herb Café branding.",
+                    "image": "/images/shop/accessory-5.jpg"
+                }
+            ]
+        }
+    ]
+}
