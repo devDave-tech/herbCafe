@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Google Fonts loaded via HTML <link> for better LCP */
 
 /* Tailwind v4 - import the new way */
 @import "tailwindcss";
