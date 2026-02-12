@@ -129,7 +129,7 @@
 
         async function initShop() {
             try {
-                const response = await fetch('/src/data/products.json');
+                const response = await fetch('/data/products.json');
                 const data = await response.json();
 
                 const grid = document.getElementById('shop-grid');

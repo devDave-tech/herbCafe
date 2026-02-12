@@ -117,7 +117,8 @@
   <section class="hero">
     <!-- Parallax Video Background -->
     <div class="absolute inset-0 will-change-transform" data-parallax>
-      <video autoplay muted loop playsinline class="video-background" poster="/images/hero-poster.jpg">
+      <video autoplay muted loop playsinline webkit-playsinline preload="auto" class="video-background"
+        poster="/images/hero-poster.jpg" id="hero-video">
         <source src="/videos/hero-loop.mp4" type="video/mp4">
       </video>
       <div class="video-overlay"></div>
@@ -146,6 +147,32 @@
       </svg>
     </div>
   </section>
+
+  <!-- iOS Video Autoplay Fix -->
+  <script>
+    (function () {
+      var video = document.getElementById('hero-video');
+      if (!video) return;
+
+      // Attempt to play immediately
+      var playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(function () {
+          // Autoplay blocked — play on first user interaction
+          var events = ['touchstart', 'click', 'scroll'];
+          function playOnInteraction() {
+            video.play();
+            events.forEach(function (e) {
+              document.removeEventListener(e, playOnInteraction);
+            });
+          }
+          events.forEach(function (e) {
+            document.addEventListener(e, playOnInteraction, { once: true, passive: true });
+          });
+        });
+      }
+    })();
+  </script>
 
   <!-- About Section -->
   <section id="about" class="section">
