@@ -40,7 +40,7 @@
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap">
 
   <!-- Preload LCP image -->
-  <link rel="preload" as="image" type="image/webp" href="/images/logo/herb-cafe-logo-no-bg-optimized.webp">
+  <link rel="preload" as="image" href="/images/logo/herb-cafe-logo-no-bg.png">
 
   <!-- CSS (loaded synchronously to prevent FOUC) -->
   <link rel="stylesheet" href="/src/css/main.css">
@@ -80,12 +80,8 @@
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <!-- Logo -->
       <a href="/" class="flex items-center">
-        <picture>
-          <source srcset="/images/logo/herb-cafe-logo-no-bg-optimized.webp" type="image/webp">
-          <img src="/images/logo/herb-cafe-logo-no-bg-sm.png" alt="Herb Café" class="h-40" fetchpriority="high"
-            width="160" height="160"
-            onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-bebas text-2xl text-herb-green\'>HERB CAFÉ</span>';">
-        </picture>
+        <img src="/images/logo/herb-cafe-logo-no-bg.png" alt="Herb Café" class="h-40" fetchpriority="high"
+          onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-bebas text-2xl text-herb-green\'>HERB CAFÉ</span>';">
       </a>
 
       <!-- Desktop Navigation -->
@@ -141,9 +137,9 @@
 
     <!-- Hero Content -->
     <div class="hero-content">
-      <h1 class="hero-title animate-fade-in-up">
-        HERB CAFÉ
-      </h1>
+      <div class="animate-fade-in-up" style="display:flex;justify-content:center;">
+        <img src="/images/logo/herb-cafe-logo-no-bg.png" alt="Herb Café" class="hero-logo">
+      </div>
       <p class="hero-subtitle animate-fade-in-up animation-delay-200">
         Cannabis • Food • Drinks • Culture
       </p>
@@ -269,7 +265,10 @@
   <!-- Partner Carousel Section -->
   <section class="partner-section">
     <div class="container mx-auto px-6">
-      <h2 class="section-title reveal">TRUSTED PARTNERS</h2>
+      <h2 class="section-title">OUR TRUSTED PARTNERS</h2>
+      <p class="text-center text-gray-400 mb-8 max-w-2xl mx-auto">
+        Proudly partnered with these amazing brands and suppliers
+      </p>
 
       <div class="splide" id="partner-carousel">
         <div class="splide__track">
@@ -281,19 +280,77 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="section">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="section-title reveal">READY TO EXPERIENCE HERB CAFÉ?</h2>
-      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto reveal">
-        Visit us in Langenhoven Park or order for delivery via WhatsApp. We can't wait to serve you!
-      </p>
-      <div class="flex gap-4 justify-center flex-wrap reveal">
-        <a href="/src/contact.html" class="btn btn-primary">VISIT US</a>
-        <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Herb%20Café!%20🌿%20I'd%20like%20to%20place%20an%20order."
-          target="_blank" class="btn btn-secondary">
-          ORDER ON WHATSAPP
-        </a>
+  <!-- CTA / Visit Us Section -->
+  <section class="cta-visit-section">
+    <!-- Animated background orbs -->
+    <div class="cta-bg-orb cta-bg-orb--1"></div>
+    <div class="cta-bg-orb cta-bg-orb--2"></div>
+    <div class="cta-bg-orb cta-bg-orb--3"></div>
+
+    <div class="container mx-auto px-6" style="position: relative; z-index: 2;">
+      <!-- Section header -->
+      <div class="cta-header reveal">
+        <span class="cta-eyebrow">COME SAY HI</span>
+        <div class="cta-logo">
+          <img src="/images/logo/herb-cafe-logo-no-bg.png" alt="Herb Café – Langenhoven Park" class="cta-logo__img">
+        </div>
+        <p class="cta-subtitle">
+          Langenhoven Park's premier cannabis-friendly café experience.<br>
+          Walk in or order delivery — we can't wait to serve you.
+        </p>
+      </div>
+
+      <!-- Info cards grid -->
+      <div class="cta-cards reveal">
+        <!-- Location Card -->
+        <div class="cta-card">
+          <div class="cta-card__icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="28" height="28">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="cta-card__title">FIND US</h3>
+          <p class="cta-card__text">Langenhoven Park<br>Bloemfontein, 9301</p>
+          <a href="/src/contact.html" class="cta-card__link">Get Directions →</a>
+        </div>
+
+        <!-- Hours Card -->
+        <div class="cta-card">
+          <div class="cta-card__icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="28" height="28">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="cta-card__title">OPENING HOURS</h3>
+          <p class="cta-card__text">Mon – Fri: 10 AM – 10 PM<br>Sat – Sun: 12 PM – 11 PM</p>
+          <span class="cta-card__badge">OPEN NOW</span>
+        </div>
+
+        <!-- WhatsApp Card -->
+        <div class="cta-card cta-card--accent">
+          <div class="cta-card__icon">
+            <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+          </div>
+          <h3 class="cta-card__title">ORDER DELIVERY</h3>
+          <p class="cta-card__text">Tap below to order<br>directly via WhatsApp</p>
+          <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Herb%20Café!%20🌿%20I'd%20like%20to%20place%20an%20order."
+            target="_blank" class="cta-card__btn">
+            💬 ORDER NOW
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom CTA buttons -->
+      <div class="cta-bottom reveal">
+        <a href="/src/contact.html" class="btn btn-primary btn--lg">VISIT US</a>
+        <a href="/src/menu.html" class="btn btn-secondary btn--lg">VIEW MENU</a>
       </div>
     </div>
   </section>

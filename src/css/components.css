@@ -7,15 +7,15 @@
     left: 0;
     right: 0;
     z-index: 50;
-    background: rgba(0, 0, 0, 0.9);
+    background: #000000;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(164, 214, 94, 0.2);
+    border-bottom: none;
     transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.98);
+    background: #000000;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -224,6 +224,26 @@
 @media (min-width: 1024px) {
     .hero-title {
         font-size: 8rem;
+    }
+}
+
+/* Hero Logo */
+.hero-logo {
+    max-width: 500px;
+    width: 90%;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(164, 214, 94, 0.3));
+    transition: filter 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.hero-logo:hover {
+    filter: drop-shadow(0 0 50px rgba(164, 214, 94, 0.5));
+}
+
+@media (min-width: 768px) {
+    .hero-logo {
+        max-width: 650px;
     }
 }
 
@@ -534,4 +554,305 @@
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* ===== CTA / VISIT US SECTION ===== */
+.cta-visit-section {
+    position: relative;
+    padding: 6rem 0 5rem;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0a0a0a 0%, #0d1a06 50%, #0a0a0a 100%);
+}
+
+/* Animated background orbs */
+.cta-bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.25;
+    pointer-events: none;
+    animation: ctaOrbFloat 8s ease-in-out infinite;
+}
+
+.cta-bg-orb--1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #A4D65E 0%, transparent 70%);
+    top: -100px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.cta-bg-orb--2 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #6BBF3B 0%, transparent 70%);
+    bottom: -80px;
+    right: -50px;
+    animation-delay: -3s;
+}
+
+.cta-bg-orb--3 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #A4D65E 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: -5s;
+    opacity: 0.12;
+}
+
+@keyframes ctaOrbFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -20px) scale(1.05);
+    }
+
+    66% {
+        transform: translate(-20px, 15px) scale(0.95);
+    }
+}
+
+/* Section header */
+.cta-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.cta-eyebrow {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    color: #A4D65E;
+    border: 1px solid rgba(164, 214, 94, 0.3);
+    padding: 0.4rem 1.2rem;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+    background: rgba(164, 214, 94, 0.06);
+}
+
+/* CTA Logo */
+.cta-logo {
+    margin-bottom: 1.5rem;
+}
+
+.cta-logo__img {
+    height: 100px;
+    max-width: 400px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(164, 214, 94, 0.15));
+    transition: filter 0.3s ease;
+}
+
+.cta-logo__img:hover {
+    filter: drop-shadow(0 0 30px rgba(164, 214, 94, 0.3));
+}
+
+@media (min-width: 768px) {
+    .cta-logo__img {
+        height: 140px;
+        max-width: 550px;
+    }
+}
+
+.cta-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+    .cta-title {
+        font-size: 4rem;
+    }
+}
+
+.cta-subtitle {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Info cards grid */
+.cta-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+@media (min-width: 640px) {
+    .cta-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Individual card */
+.cta-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(164, 214, 94, 0.12);
+    border-radius: 1.25rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(164, 214, 94, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.cta-card:hover {
+    border-color: rgba(164, 214, 94, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(164, 214, 94, 0.08);
+}
+
+.cta-card:hover::before {
+    opacity: 1;
+}
+
+/* Accent card (WhatsApp) */
+.cta-card--accent {
+    border-color: rgba(164, 214, 94, 0.25);
+    background: rgba(164, 214, 94, 0.04);
+}
+
+.cta-card--accent:hover {
+    border-color: rgba(164, 214, 94, 0.5);
+    box-shadow: 0 16px 48px rgba(164, 214, 94, 0.15);
+}
+
+/* Card icon */
+.cta-card__icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(164, 214, 94, 0.1);
+    color: #A4D65E;
+    transition: all 0.3s ease;
+}
+
+.cta-card:hover .cta-card__icon {
+    background: rgba(164, 214, 94, 0.2);
+    transform: scale(1.1);
+}
+
+/* Card title */
+.cta-card__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.35rem;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.03em;
+}
+
+/* Card text */
+.cta-card__text {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Card link */
+.cta-card__link {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #A4D65E;
+    transition: all 0.3s ease;
+    letter-spacing: 0.02em;
+}
+
+.cta-card__link:hover {
+    color: #c4f078;
+    transform: translateX(4px);
+}
+
+/* Card badge (Open Now) */
+.cta-card__badge {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #0a0a0a;
+    background: #A4D65E;
+    padding: 0.3rem 0.8rem;
+    border-radius: 9999px;
+    animation: badgePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(164, 214, 94, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(164, 214, 94, 0);
+    }
+}
+
+/* Card CTA button (WhatsApp) */
+.cta-card__btn {
+    display: inline-block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: #0a0a0a;
+    background: #A4D65E;
+    padding: 0.6rem 1.4rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-card__btn:hover {
+    background: #c4f078;
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(164, 214, 94, 0.3);
+}
+
+/* Bottom CTA */
+.cta-bottom {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Larger button variant */
+.btn--lg {
+    padding: 1.1rem 2.8rem;
+    font-size: 1.35rem;
 }
