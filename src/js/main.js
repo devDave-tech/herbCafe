@@ -39,15 +39,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Check if age is already verified
     const isVerified = localStorage.getItem('herbCafeAgeVerified') === 'true';
 
+    // Always show loader first (gives video time to buffer)
+    await initLoader();
+
     if (isVerified) {
-        // Skip loader and age gate, initialize page directly
+        // Age already verified, initialize page directly
         window.herbCafe.isAgeVerified = true;
         initPage();
     } else {
-        // Show loader first
-        await initLoader();
-
-        // Then show age gate
+        // Show age gate after loader
         initAgeGate(onAgeVerified);
     }
 });

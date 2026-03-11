@@ -31,8 +31,8 @@ export function initLoader() {
                 
                 .loader-cup-wrapper {
                     position: relative;
-                    width: 200px;
-                    height: 200px;
+                    width: 400px;
+                    height: 400px;
                 }
                 
                 .loader-cup-grey {
@@ -61,20 +61,7 @@ export function initLoader() {
                     margin-top: 1rem;
                 }
                 
-                .loader-text {
-                    font-family: 'Bebas Neue', sans-serif;
-                    font-size: 3rem;
-                    color: #A4D65E;
-                    letter-spacing: 0.2em;
-                    opacity: 0;
-                    transform: translateY(20px);
-                    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-                }
-                
-                .loader-text.visible {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+
                 
                 .loader-fade-out {
                     animation: fadeOut 0.5s ease-out forwards;
@@ -92,7 +79,7 @@ export function initLoader() {
                 <img src="/images/logo/cup_logo.png" alt="" class="loader-cup-color" id="loader-fill">
             </div>
             <div class="loader-progress" id="loader-percent">0%</div>
-            <div class="loader-text" id="loader-text">HERB CAFÉ</div>
+
         `;
 
         // Add to body
@@ -100,7 +87,7 @@ export function initLoader() {
 
         const fillEl = document.getElementById('loader-fill');
         const percentEl = document.getElementById('loader-percent');
-        const textEl = document.getElementById('loader-text');
+
 
         // Simulate loading progress
         let progress = 0;
@@ -122,8 +109,7 @@ export function initLoader() {
                 fillEl.style.clipPath = `inset(0% 0 0 0)`;
                 percentEl.textContent = '100%';
 
-                // Show text
-                textEl.classList.add('visible');
+
 
                 // Fade out percent
                 percentEl.style.opacity = '0';

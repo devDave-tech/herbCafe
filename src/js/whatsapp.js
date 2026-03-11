@@ -7,7 +7,7 @@
  */
 
 // PLACEHOLDER: Replace with actual WhatsApp number
-const WHATSAPP_NUMBER = '27XXXXXXXXX';
+const WHATSAPP_NUMBER = '27719212940';
 const DEFAULT_MESSAGE = 'Hi Herb Café! 🌿 I\'d like to place an order.';
 
 /**
