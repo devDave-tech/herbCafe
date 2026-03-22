@@ -265,6 +265,51 @@
     </div>
   </section>
 
+  <!-- Community Sign-Up Section -->
+  <section class="community-section" id="community">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title reveal">JOIN OUR COMMUNITY</h2>
+      <div class="community-card reveal">
+        <p class="community-subtitle">
+          Become a Herb Café member and be the first to know about exclusive events, new products, and special offers.
+        </p>
+        <form id="community-form" class="community-form" novalidate>
+          <!-- First Name -->
+          <div class="form-group">
+            <label class="form-label" for="cf-first-name">First Name</label>
+            <input type="text" id="cf-first-name" class="form-input" placeholder="Enter your first name" required>
+            <span class="form-error"></span>
+          </div>
+          <!-- Surname -->
+          <div class="form-group">
+            <label class="form-label" for="cf-surname">Surname</label>
+            <input type="text" id="cf-surname" class="form-input" placeholder="Enter your surname" required>
+            <span class="form-error"></span>
+          </div>
+          <!-- Email -->
+          <div class="form-group form-group--full">
+            <label class="form-label" for="cf-email">Email</label>
+            <input type="email" id="cf-email" class="form-input" placeholder="you@example.com" required>
+            <span class="form-error"></span>
+          </div>
+          <!-- Cell Number -->
+          <div class="form-group form-group--full">
+            <label class="form-label" for="cf-cell">Cell Number</label>
+            <input type="tel" id="cf-cell" class="form-input" placeholder="071 234 5678" required>
+            <span class="form-error"></span>
+          </div>
+          <!-- Submit -->
+          <div class="form-group form-group--full">
+            <button type="submit" class="community-submit">
+              <span class="btn-text">JOIN THE COMMUNITY</span>
+              <span class="spinner" style="display:none;"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- Partner Carousel Section -->
   <section class="partner-section">
     <div class="container mx-auto px-6">
@@ -430,12 +475,13 @@
   <!-- Main JavaScript -->
   <script type="module" src="/src/js/main.js"></script>
 
-  <!-- Carousel initialization for homepage -->
+  <!-- Carousel & Community initialization for homepage -->
   <script type="module">
     import { initCarousel } from '/src/js/carousel.js';
+    import { initCommunityForm } from '/src/js/community.js';
     document.addEventListener('DOMContentLoaded', () => {
-      // Wait for main.js to complete, then init carousel
       setTimeout(initCarousel, 100);
+      initCommunityForm();
     });
   </script>
 </body>
